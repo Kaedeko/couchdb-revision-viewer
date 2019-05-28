@@ -1,6 +1,6 @@
 {
   "name": "couchdb-revision-viewer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Tool for viewing past revisions of CouchDB documents",
   "main": "src/index.js",
   "repository": "https://github.com/Kaedeko/couchdb-revision-viewer",
