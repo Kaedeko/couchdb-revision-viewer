@@ -41,7 +41,15 @@ async function fetchRevisions(url) {
 
     revisionArray.forEach((result, index) => {
       if (result instanceof Error) {
-        console.error(result);
+        //console.error(result.response);
+        //if(result.response.status === 404) {
+          const missingRev = result.response.request.path.split("?rev=")[1];
+          console.log(
+            chalk.bgBlue.white(
+                `Revision ${missingRev} unavailable.`,
+            )
+          );
+        //}
         return;
       }
       const thisRevisionNumber = result.data._rev.split("-")[0];
